@@ -109,7 +109,18 @@ function criarMeta2() {
 
 // Ambas as formas funcionam. Importante se atentar que não pode criar duas vezes a mesma função. Devem ter nomes diferentes.
 
+let metas = [
+    meta,
+    {
+        value: 'caminhar 20 minutos por dia',
+        checked: false
+    }
+]
 
+console.log(metas[1].value)
+// Aqui eu acesso o objeto meta, dentro da variavel metas, e acesso o valor value dentro desse objeto. Que retornará caminhar 20 minutos por dia.
 
+console.log(metas[0].value)
+// Aqui acessa o primeiro objeto meta definido, que retornará não é mais ler um livro.
 
 ```
