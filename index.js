@@ -58,7 +58,7 @@ const metasRealizadas = async () => {
     }
 
     await select({
-        message: "Metas realizadas!",
+        message: "Metas realizadas: " + realizadas.length,
         choices: [...realizadas]
     })
 }
@@ -74,7 +74,7 @@ const metasAbertas = async () => {
     }
 
     await select({
-        message: "Metas abertas!" + realizadas.length,
+        message: "Metas abertas: " + abertas.length,
         choices: [...abertas]
     })
 }
@@ -84,19 +84,19 @@ const deletarMetas = async () => {
         return {value: meta.value, checked: false}
     })
 
-    const deletar = await checkbox({
+    const aDeletar = await checkbox({
         message: "Selecione o item para deletar!",
         choices: [...metasDesmarcadas],
         instructions: false
     })
 
-    if(deletar.length == 0) {
+    if(aDeletar.length == 0) {
         console.log("Nenhum item para deletar!");
         return
     }
 
-    deletar.forEach((deletar) => {
-        metas.filter((meta) => {
+    aDeletar.forEach((deletar) => {
+        metas = metas.filter((meta) => {
             return meta.value != deletar
         })
     })
