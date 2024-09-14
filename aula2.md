@@ -2,6 +2,11 @@
 
 [x] While
 
+## Condicionais:
+
+[x] switch
+
+
 ```js
 
 function start() { // A function start inicia a aplicação
@@ -18,3 +23,12 @@ const start2 = () => {
 
 start2()
 
+function start() {
+    let count = 0
+    while(count < 10){
+        console.log(count)
+        count = count + 1
+    }
+}
+
+start()
