@@ -1,0 +1,20 @@
+## Estrutura de repetição:
+
+[x] While
+
+```js
+
+function start() { // A function start inicia a aplicação
+    console.log('começou') // Aqui eu confiro se a função funcionou, visto que abaixo, quando executo a função irei ter o retorno da mensagem dentro do console.log
+}
+
+start() // Aqui eu executo a função
+
+// Outra forma de atribuir a mesma função, usando o arrow function:
+
+const start2 = () => {
+    console.log('começou')
+}
+
+start2()
+
